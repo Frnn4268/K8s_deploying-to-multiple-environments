@@ -1,0 +1,17 @@
+targets:
+  - name: staging
+    args:
+      environment: staging
+    # Adding a context to .kluctl.yaml helps prevent accidentally deploying to the wrong cluster!
+    context: devops-3tierwebapp
+
+  - name: production
+    args:
+      environment: production
+    # Adding a context to .kluctl.yaml helps prevent accidentally deploying to the wrong cluster!
+    context: gke_kubernetes-424917_us-central1-a_devops-3tierwebapp
+
+args:
+  - name: environment
+
+discriminator: kluctl-{{ target.name }}
