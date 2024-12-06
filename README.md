@@ -11,7 +11,6 @@ Here's an overview of the project's directory structure:
 ```plaintext
 │   .gitignore
 │   devbox.json
-│   estructura_carpetas.txt
 │   README.md
 │   Taskfile.yaml
 │
